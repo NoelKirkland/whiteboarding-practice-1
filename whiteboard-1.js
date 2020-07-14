@@ -5,9 +5,9 @@
 let input = ["Hello", "Alaska", "Dad", "Peace", "type", "pretty", "reap", "Mom", "repeat", "shall", "Pewtiepie"];
 let output = [];
 
-const lineOne = ["Q","q","W","w","E","e","R","r","T","t","Y","y","U","u","I","i","O","o","P","p"];
-const lineTwo = ["A","a","S","s","D","d","F","f","G","g","H","h","J","j","K","k","L","l"];
-const lineThree = ["Z","z","X","x","C","c","V","v","B","b","N","n","M","m"];
+const lineOne = ["q","w","e","r","t","y","u","i","o","p"];
+const lineTwo = ["a","s","d","f","g","h","j","k","l"];
+const lineThree = ["z","x","c","v","b","n","m"];
 
 function validateWordArray(array){
   array.forEach(function(word){
@@ -19,7 +19,7 @@ function validateWordArray(array){
     let lineTwoResults = [];
     let lineThreeResults = [];
     wordArray.forEach(function(index){
-      if (lineOne.includes(index)){
+      if (lineOne.includes(index.toLowerCase())){
         lineOneResults.push(index)
       } 
       if (lineOneResults.length === wordArray.length){
@@ -27,7 +27,7 @@ function validateWordArray(array){
         output.push(googWord1);
       }
   
-      if (lineTwo.includes(index)){
+      if (lineTwo.includes(index.toLowerCase())){
         lineTwoResults.push(index)
       } 
       if (lineTwoResults.length === wordArray.length){
@@ -35,7 +35,7 @@ function validateWordArray(array){
         output.push(goodWord2);
       }
   
-      if (lineThree.includes(index)){
+      if (lineThree.includes(index.toLowerCase())){
         lineThreeResults.push(index)
       } 
       if (lineThreeResults.length === wordArray.length){
