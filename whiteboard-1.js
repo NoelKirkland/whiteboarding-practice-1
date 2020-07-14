@@ -25,7 +25,6 @@ function validateWordArray(array){
       if (lineOneResults.length === wordArray.length){
         var googWord1 =  lineOneResults.join("");
         output.push(googWord1);
-        
       }
   
       if (lineTwo.includes(index)){
@@ -45,5 +44,5 @@ function validateWordArray(array){
       }
     });
   }
-  console.log(output)
+  console.log(output);
 }
